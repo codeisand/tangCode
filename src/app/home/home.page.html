@@ -1,20 +1,17 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
     <ion-title>
-      Blank
+      Tangent User Login 
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content [fullscreen]="true" >
+  <ion-row style="height: calc(100vh - 56px) ;justify-content: center;align-items: center;">
+    <ion-col style="margin: 10px;">
+      <ion-input [(ngModel)]="username" class="iinput" label="Username" label-placement="floating" fill="outline" placeholder="Enter username"></ion-input>
+      <ion-input [(ngModel)]="password" class="iinput" label="Password" label-placement="floating" fill="outline" placeholder="Enter password" type="password"></ion-input>
+      <ion-button expand="block" color="success" (click)="login()">login</ion-button>
+    </ion-col>
+  </ion-row>
 </ion-content>

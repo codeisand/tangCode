@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="tertiary">
+    <ion-title>Dashboard</ion-title>
+    <ion-button fill="clear" slot="end" color="light" id="modal"><ion-icon slot="start" name="add"></ion-icon> add customer</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+
+
+  <ion-modal #modal trigger="modal" [initialBreakpoint]="0.5" [breakpoints]="[0.5, 0.8]">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar color="warning">
+          <ion-title>create customer</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <div style="margin: 10px;">
+          <ion-list line="none">
+            <ion-item>
+              <ion-input  label="Customer Name" placeholder="enter name"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Customer Email" placeholder="enter email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Customer Phone Number" placeholder="enter phone number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input label="Customer Fax" placeholder="enter fax"></ion-input>
+            </ion-item>
+          </ion-list>         
+        </div>
+
+
+
+
+        <ion-button expand="block" color="success" (click)="save()">save</ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>
